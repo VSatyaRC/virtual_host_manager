@@ -18,7 +18,7 @@ def read_templates():
 
 
 def create_index(domain_name):
-    f = open(vh_templates + '/index.ftl')
+    f = open(vh_templates + '/index')
     index = f.read()
     index_location = '/var/www/{0}/public_html'.format(domain_name)
     pathlib.Path(index_location).mkdir(parents=True, exist_ok=True)
@@ -29,7 +29,7 @@ def create_index(domain_name):
 def create_vh(domain_name):
     proxy_ip = input('Proxy address:')
     port = input('Proxy port:')
-    f = open(vh_templates + '/vh.ftl')
+    f = open(vh_templates + '/vh')
     index = f.read()
     f.close()
     domain_conf = '/etc/apache2/sites-available/' + domain_name + '.conf'
