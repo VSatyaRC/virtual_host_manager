@@ -6,6 +6,6 @@
 	ServerAlias $domainName
 
 	ProxyPass / http://$proxyAddress:$proxyPort/
-    ProxyPassReverse / http://$proxyAddress:$proxyPort/
+        ProxyPassReverse / http://$proxyAddress:$proxyPort/
 
 </VirtualHost>
